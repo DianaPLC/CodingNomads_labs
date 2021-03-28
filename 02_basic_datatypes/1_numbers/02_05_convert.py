@@ -10,3 +10,17 @@ Demonstrate how to:
     Take note of what information is lost when some conversions take place.
 
 '''
+import math
+
+num = 4
+num_float = float(num)
+print(num_float)
+num_int = int(num_float)
+print(num_int)
+floor_result = math.floor(4/2.2)
+print(floor_result)
+
+val1 = float(input("Please enter a number: "))
+val2 = float(input("Please enter another number to multiply by: "))
+product = val1*val2
+print(product)
