@@ -14,6 +14,7 @@ sorted_list = []
 while len(unsorted_list) > 0:
     #loop through the unsorted list to find the minimum value
     current_value = unsorted_list[0][1]
+        #Why was this variable set? It isn't used anywhere else in the code.
     min_value = unsorted_list[0][1]
     index = 0
     for tuple_ in unsorted_list:
@@ -22,9 +23,13 @@ while len(unsorted_list) > 0:
             min_value = tuple_[1]
             min_index = index
         index += 1
+            #Iterating through the whole unsorted list every time to find the lowest value seems inefficient.
+            #Instead, you could assume each value is the lowest/highest as you pull it, then sort the next one relative to that.
 
     #push the minimum value onto the sorted list
     sorted_list.append(unsorted_list.pop(min_index))
+        #This is a good use of pop to move an element from one list to another in a streamlined way.
     print("unsorted list is " + str(unsorted_list))
+        #This is a useful line for debugging
 
 print(sorted_list)
