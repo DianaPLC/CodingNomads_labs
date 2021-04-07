@@ -25,3 +25,8 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for entry in office:
+    split_name = entry["full_name"].split(" ")
+    reordered_name = split_name[-1].upper()+", "+split_name[0]
+    print(f"{reordered_name:<20}{entry['item']}")
