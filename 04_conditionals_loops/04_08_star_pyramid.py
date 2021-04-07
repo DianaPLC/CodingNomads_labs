@@ -17,3 +17,19 @@ Another example: if input is 3, you will output
 Hint: Think of nested for loops
 
 '''
+n = ""
+
+while type(n) != "int":
+    try:
+        n = int(input("Please enter a whole number: "))
+        if n < 0:
+            print("Please enter a positive number.")
+            continue
+        break
+    except ValueError:
+        print("Please enter an actual number.")
+
+
+for count in range (1,n+1):
+    row = "* " * count
+    print(row)

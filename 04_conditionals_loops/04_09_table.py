@@ -8,3 +8,9 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+
+for tens in range(0,41,10):
+    print_string = ""
+    for ones in range(0,10):
+        print_string += str(tens+ones)+" "
+    print(print_string)
